@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/basketball"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:onClick="basketOnClick"
+        android:src="@drawable/basketboltopu" />
+
+    <ImageButton
+        android:id="@+id/toplamacikarma"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:onClick="topcikOnClick"
+        android:src="@drawable/topcik" />
+
+    <ImageButton
+        android:id="@+id/word"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:onClick="wordOnClick"
+        android:src="@drawable/abc" />
+
+    <ImageButton
+        android:id="@+id/bas"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:onClick="basOnClick"
+        android:src="@drawable/img" />
+</LinearLayout>

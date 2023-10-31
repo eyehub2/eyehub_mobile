@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFCC"
+    tools:context=".WordComparison">
+
+    <GridLayout
+        android:id="@+id/gridLayout2"
+        android:layout_width="321dp"
+        android:layout_height="567dp"
+        android:layout_marginBottom="12dp"
+        android:columnCount="10"
+        android:rowCount="10"
+        android:useDefaultMargins="true"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.544"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:ignore="GridLayout">
+
+        <Button
+            android:id="@+id/uzunButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="@string/uzun"
+            android:visibility="invisible"
+            android:layout_column="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/uzumButton"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_row="0" />
+
+        <Button
+            android:id="@+id/uzumButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="@string/üzüm"
+            android:visibility="invisible"
+            android:layout_column="1"
+            app:layout_constraintBottom_toTopOf="@+id/ozgurButton"
+            app:layout_constraintEnd_toStartOf="@+id/uzunButton"
+            app:layout_constraintStart_toEndOf="@+id/uzumText"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_row="0" />
+
+        <TextView
+            android:id="@+id/kuruText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:gravity="center"
+            android:text="@string/kuru"
+            android:textAllCaps="false"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            android:layout_column="7"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/yurtText"
+            android:layout_row="1" />
+
+        <Button
+            android:id="@+id/kuruButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="@string/kuru"
+            android:visibility="invisible"
+            android:layout_column="7"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/kurtButton"
+            android:layout_row="1" />
+
+        <Button
+            android:id="@+id/kuzuButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="@string/kuzu"
+            android:visibility="invisible"
+            android:layout_column="7"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toStartOf="@+id/kuruButton"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/kuruText"
+            android:layout_row="1" />
+
+        <TextView
+            android:id="@+id/uzumText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:gravity="center"
+            android:text="@string/üzüm"
+            android:textAllCaps="false"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            android:layout_column="0"
+            app:layout_constraintBottom_toTopOf="@+id/OzgunText"
+            app:layout_constraintEnd_toStartOf="@+id/uzumButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_row="0" />
+
+        <Button
+            android:id="@+id/kurtButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:text="@string/kurt"
+            android:visibility="invisible"
+            android:layout_column="6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/yurtButton"
+            app:layout_constraintTop_toBottomOf="@+id/balButton"
+            android:layout_row="2" />
+
+        <Button
+            android:id="@+id/yurtButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:text="@string/yurt"
+            android:visibility="invisible"
+            android:layout_column="6"
+            app:layout_constraintBottom_toTopOf="@+id/kuzuButton"
+            app:layout_constraintStart_toEndOf="@+id/yurtText"
+            app:layout_constraintTop_toBottomOf="@+id/bolButton"
+            app:layout_constraintVertical_bias="0.0"
+            android:layout_row="1" />
+
+        <TextView
+            android:id="@+id/balText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:gravity="center"
+            android:text="@string/bal"
+            android:textAllCaps="false"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            android:layout_column="6"
+            app:layout_constraintBottom_toTopOf="@+id/yurtText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/elmaText"
+            android:layout_row="0" />
+
+        <Button
+            android:id="@+id/balButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:text="@string/bal"
+            android:visibility="invisible"
+            android:layout_column="5"
+            app:layout_constraintBottom_toTopOf="@+id/kurtButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/elmaButton"
+            android:layout_row="2" />
+
+        <Button
+            android:id="@+id/bolButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:text="@string/bol"
+            android:visibility="invisible"
+            android:layout_column="5"
+            app:layout_constraintEnd_toStartOf="@+id/balButton"
+            app:layout_constraintStart_toEndOf="@+id/balText"
+            app:layout_constraintTop_toBottomOf="@+id/imlaButton"
+            android:layout_row="1" />
+
+        <TextView
+            android:id="@+id/yurtText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:gravity="center"
+            android:text="@string/yurt"
+            android:textAllCaps="false"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            android:layout_column="6"
+            app:layout_constraintEnd_toStartOf="@+id/yurtButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/balText"
+            android:layout_row="0" />
+
+        <Button
+            android:id="@+id/elmaButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:text="@string/elma"
+            android:visibility="invisible"
+            android:layout_column="4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imlaButton"
+            app:layout_constraintTop_toBottomOf="@+id/halButton"
+            android:layout_row="2" />
+
+        <Button
+            android:id="@+id/imlaButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:text="@string/mla"
+            android:visibility="invisible"
+            android:layout_column="4"
+            app:layout_constraintBottom_toTopOf="@+id/bolButton"
+            app:layout_constraintStart_toEndOf="@+id/elmaText"
+            app:layout_constraintTop_toBottomOf="@+id/hakButton"
+            android:layout_row="1" />
+
+        <TextView
+            android:id="@+id/OzgunText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:gravity="center"
+            android:text="@string/özgün"
+            android:textAllCaps="false"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            android:layout_column="0"
+            app:layout_constraintBottom_toTopOf="@+id/celikText"
+            app:layout_constraintEnd_toStartOf="@+id/ozgurButton"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/celikText"
+            android:layout_row="1" />
+
+        <TextView
+            android:id="@+id/celikText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:gravity="center"
+            android:text="@string/çelik"
+            android:textAllCaps="false"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            android:layout_column="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/OzgunText"
+            android:layout_row="2" />
+
+        <Button
+            android:id="@+id/ozgurButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:text="@string/özgür"
+            android:visibility="invisible"
+            android:layout_column="1"
+            app:layout_constraintStart_toEndOf="@+id/OzgunText"
+            app:layout_constraintTop_toBottomOf="@+id/uzumButton"
+            android:layout_row="1" />
+
+        <Button
+            android:id="@+id/ozgunButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:text="@string/özgün"
+            android:visibility="invisible"
+            android:layout_column="2"
+            app:layout_constraintBottom_toTopOf="@+id/cekikButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/ozgurButton"
+            app:layout_constraintTop_toBottomOf="@+id/uzunButton"
+            android:layout_row="1" />
+
+        <Button
+            android:id="@+id/cekikButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:text="@string/çekik"
+            android:visibility="invisible"
+            android:layout_column="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/celikButton"
+            app:layout_constraintTop_toBottomOf="@+id/ozgunButton"
+            android:layout_row="2" />
+
+        <Button
+            android:id="@+id/halButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:text="@string/hal"
+            android:visibility="invisible"
+            android:layout_column="3"
+            app:layout_constraintBottom_toTopOf="@+id/elmaButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/hakButton"
+            app:layout_constraintTop_toBottomOf="@+id/cekikButton"
+            android:layout_row="2" />
+
+        <Button
+            android:id="@+id/hakButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:text="@string/hak"
+            android:visibility="invisible"
+            android:layout_column="3"
+            app:layout_constraintStart_toEndOf="@+id/halText"
+            app:layout_constraintTop_toBottomOf="@+id/celikButton"
+            android:layout_row="1" />
+
+        <TextView
+            android:id="@+id/elmaText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:gravity="center"
+            android:text="@string/elma"
+            android:textAllCaps="false"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            android:layout_column="4"
+            app:layout_constraintEnd_toStartOf="@+id/imlaButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/halText"
+            android:layout_row="0" />
+
+        <Button
+            android:id="@+id/celikButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:text="@string/çelik"
+            android:visibility="invisible"
+            android:layout_column="1"
+            app:layout_constraintStart_toEndOf="@+id/celikText"
+            app:layout_constraintTop_toBottomOf="@+id/ozgurButton"
+            android:layout_row="2" />
+
+        <TextView
+            android:id="@+id/halText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:gravity="center"
+            android:text="@string/hal"
+            android:textAllCaps="false"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            android:layout_column="3"
+            app:layout_constraintBottom_toTopOf="@+id/elmaText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/celikText"
+            android:layout_row="0" />
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="255dp"
+        android:layout_height="44dp"
+        android:text="@string/doğruluk_yüzdesi"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="329dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="@string/doğru_olan_kelimeyi_işaretleyiniz"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/baslaButton"
+        android:layout_width="142dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="80dp"
+        android:text="@string/başla"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
