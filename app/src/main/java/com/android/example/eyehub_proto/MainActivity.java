@@ -30,6 +30,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, WordComparison.class);
         startActivity(intent);
     }
+    public void t2sOnClick(View view) {
+        Intent intent = new Intent(MainActivity.this, FragmentCalistir.class);
+        startActivity(intent);
+    }
 
 
 }

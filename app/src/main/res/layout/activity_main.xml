@@ -12,6 +12,7 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:contentDescription="@android:string/untitled"
         android:onClick="basketOnClick"
         android:src="@drawable/basketboltopu" />
 
@@ -20,6 +21,7 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:contentDescription="@android:string/untitled"
         android:onClick="topcikOnClick"
         android:src="@drawable/topcik" />
 
@@ -28,14 +30,16 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:contentDescription="@android:string/untitled"
         android:onClick="wordOnClick"
         android:src="@drawable/abc" />
 
     <ImageButton
-        android:id="@+id/bas"
+        android:id="@+id/t2s"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:onClick="basOnClick"
+        android:contentDescription="@android:string/untitled"
+        android:onClick="t2sOnClick"
         android:src="@drawable/img" />
 </LinearLayout>
