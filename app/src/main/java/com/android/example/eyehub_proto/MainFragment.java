@@ -314,6 +314,11 @@ public class MainFragment extends Fragment implements RecognitionListener {
         }
     }
 
+
+
+
+
+
     @Override
     public void onEvent(int i, Bundle bundle) {
         Log.e(TAG,"onEvent");

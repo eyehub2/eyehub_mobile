@@ -12,11 +12,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.android.example.eyehub_proto.pojo.UserData;
+
 import java.util.ArrayList;
 import java.util.Random;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class ctchthknny extends AppCompatActivity {
     private int score = 0;
+
+    String isim;
 
     private Handler handler = new Handler(Looper.getMainLooper());
     private Runnable runnable = new Runnable() {
@@ -37,7 +45,26 @@ public class ctchthknny extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        APIInterface requestUser= APIClient.getClient().create(APIInterface.class);
+        //Buraya UID kısmına login kısmında alınan bilgi yazılacak
+        requestUser.getUser("3").enqueue(new Callback<UserData>() {
+            @Override
+            public void onResponse(Call<UserData> call, Response<UserData> response) {
+                isim= response.body().getData().getFirst_name();
+            }
+
+            @Override
+            public void onFailure(Call<UserData> call, Throwable t) {
+                isim=t.getMessage();
+
+            }
+        });
+
+
+
+
         setContentView(R.layout.ctch_layout);
+
 
         imageArray.add(findViewById(R.id.imageView));
         imageArray.add(findViewById(R.id.imageView2));
@@ -73,10 +100,13 @@ public class ctchthknny extends AppCompatActivity {
                 });
 
                 alert.setNegativeButton("No", (dialog, which) -> {
-                    Toast.makeText(ctchthknny.this, "Time's UP! Score: " + score, Toast.LENGTH_LONG).show();
+                    Toast.makeText(ctchthknny.this, "Time's UP! Score: " + score+" Well done "+isim, Toast.LENGTH_LONG).show();
                 });
 
                 alert.show();
+
+
+
             }
 
             @Override

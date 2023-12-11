@@ -23,12 +23,13 @@ public class ToplamaActivity extends AppCompatActivity {
     EditText isimText;
     int result=0;
 
+
     Random random = new Random();
     TextView kalanText;
     EditText resultCounter;
     int n1,n2;
     double x=0,resultCount;
-    @SuppressLint("SetTextI18n")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
