@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EYEHUB_proto</string>
+    <string name="time_up">Time:0</string>
+    <string name="score">Score: </string>
+    <string name="uzun">Long</string>
+    <string name="üzüm">Grape</string>
+    <string name="kuru">Dry</string>
+    <string name="kuzu">Lamb</string>
+    <string name="kurt">Wolf</string>
+    <string name="yurt">Homeland</string>
+    <string name="bal">Honey</string>
+    <string name="bol">Abundant</string>
+    <string name="elma">Apple</string>
+    <string name="mla">Spell</string>
+    <string name="özgün">Original</string>
+    <string name="çelik">Steel</string>
+    <string name="özgür">Free</string>
+    <string name="çekik">Slant-eyed</string>
+    <string name="hal">Situation</string>
+    <string name="hak">Right</string>
+    <string name="doğruluk_yüzdesi">Accuracy Percentage</string>
+    <string name="doğru_olan_kelimeyi_işaretleyiniz">Select the correct word.</string>
+    <string name="başla">START</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sifrenizi_giriniz">Enter your password</string>
+    <string name="sifremi_unuttum">I forgot my password</string>
+    <string name="bir_hesabin_yok_mu">Don\'t have an account?</string>
+    <string name="kayit_ol">Register</string>
+    <string name="e_posta_adresinizi_giriniz">Enter your email address</string>
+    <string name="sifreyi_tekrar_giriniz">Re-enter the password</string>
+    <string name="bir_sifre_giriniz">Enter a password</string>
+    <string name="tamam">Okay</string>
+    <string name="forget_pass_desc">After typing your email address in the space below and clicking OK, a link will be sent to your email address to reset your password. You can check your inbox in a few minutes.</string>
+    <string name="kullanici">Username</string>
+    <string name="disleksi_text">One day, the turtle stood in front of the rabbit and said, "I can run faster than you\!" The rabbit, even though he said, "Go away\!" couldn\'t convince him. Finally, when the day came, they agreed and then separated. The day came. The rabbit knew how to run\! He didn\'t care, he curled up on the side of the road and slept; but the turtle knew he couldn\!t run, didn\'t waste a minute, straightened the road and arrived at the destination before the rabbit.</string>
+    <string name="hazir_metin">Sample Text</string>
+    <string name="sonuc_text">Result</string>
+    <string name="sonucunuz">Your Result</string>
+    <string name="gonder">Send</string>
+    <string name="basla">Start</string>
+    <string name="todo">TODO</string>
+
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="ball_game">Ball Game</string>
+    <string name="words_game">Word Game</string>
+    <string name="summation_substraction">Addition Subtraction</string>
+    <string name="text_to_speech">Text to Speech</string>
+    <string name="education">Education</string>
+
+    <string name="gallery">Gallery</string>
+    <string name="slideshow">Slideshow</string>
+    <string name="tools">Tools</string>
+    <string name="only_toggle_theme_would_work">Only Toggle Theme would work</string>
+    <string name="share">Share</string>
+    <string name="toggle_theme">Toggle Theme</string>
+    <string name="menu">Menu</string>
+    <string name="courses">Courses</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="user">User</string>
+    <string name="imp">Import</string>
+    <string name="Turkish">Turkish</string>
+    <string name="English">English</string>
+    <string name="languages">Languages</string>
+</resources>

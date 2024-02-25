@@ -1,5 +1,7 @@
 package com.android.example.eyehub_proto.pojo;
 
+import java.util.Date;
+
 public class UserData {
     DataClass data;
     SupportClass support;
@@ -21,30 +23,31 @@ public class UserData {
     }
 
     public static class DataClass{
-        String first_name,last_name,id,email,avatar;
+        String _id,username,password,email,gender,location;
+        Date subscription_start_date,birthday,subscription_end_date;
 
-        public String getFirst_name() {
-            return first_name;
+        public String get_id() {
+            return _id;
         }
 
-        public void setFirst_name(String first_name) {
-            this.first_name = first_name;
+        public void set_id(String _id) {
+            this._id = _id;
         }
 
-        public String getLast_name() {
-            return last_name;
+        public String getUsername() {
+            return username;
         }
 
-        public void setLast_name(String last_name) {
-            this.last_name = last_name;
+        public void setUsername(String username) {
+            this.username = username;
         }
 
-        public String getId() {
-            return id;
+        public String getPassword() {
+            return password;
         }
 
-        public void setId(String id) {
-            this.id = id;
+        public void setPassword(String password) {
+            this.password = password;
         }
 
         public String getEmail() {
@@ -55,12 +58,44 @@ public class UserData {
             this.email = email;
         }
 
-        public String getAvatar() {
-            return avatar;
+        public String getGender() {
+            return gender;
         }
 
-        public void setAvatar(String avatar) {
-            this.avatar = avatar;
+        public void setGender(String gender) {
+            this.gender = gender;
+        }
+
+        public String getLocation() {
+            return location;
+        }
+
+        public void setLocation(String location) {
+            this.location = location;
+        }
+
+        public Date getSubscription_start_date() {
+            return subscription_start_date;
+        }
+
+        public void setSubscription_start_date(Date subscription_start_date) {
+            this.subscription_start_date = subscription_start_date;
+        }
+
+        public Date getBirthday() {
+            return birthday;
+        }
+
+        public void setBirthday(Date birthday) {
+            this.birthday = birthday;
+        }
+
+        public Date getSubscription_end_date() {
+            return subscription_end_date;
+        }
+
+        public void setSubscription_end_date(Date subscription_end_date) {
+            this.subscription_end_date = subscription_end_date;
         }
     }
     class SupportClass{

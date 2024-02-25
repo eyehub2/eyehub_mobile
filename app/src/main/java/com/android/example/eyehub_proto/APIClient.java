@@ -13,14 +13,16 @@ public class APIClient
     public static Retrofit retrofit = null;
 
     static Retrofit getClient() {
-
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-        OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
 
+        OkHttpClient client = new OkHttpClient.Builder()
+                .addInterceptor(interceptor)
+                // Add additional configurations if needed, such as SSL/TLS configurations
+                .build();
 
         retrofit = new Retrofit.Builder()
-                .baseUrl("https://reqres.in")
+                .baseUrl("https://localhost:3300")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build();

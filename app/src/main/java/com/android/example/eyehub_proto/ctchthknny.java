@@ -47,10 +47,11 @@ public class ctchthknny extends AppCompatActivity {
 
         APIInterface requestUser= APIClient.getClient().create(APIInterface.class);
         //Buraya UID kısmına login kısmında alınan bilgi yazılacak
-        requestUser.getUser("3").enqueue(new Callback<UserData>() {
+        requestUser.getUser("657f52124a844f58570b41ea").enqueue(new Callback<UserData>() {
             @Override
             public void onResponse(Call<UserData> call, Response<UserData> response) {
-                isim= response.body().getData().getFirst_name();
+                isim= response.body().getData().getUsername();
+
             }
 
             @Override

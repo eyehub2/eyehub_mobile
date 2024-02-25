@@ -32,12 +32,40 @@
     <string name="tamam">Tamam</string>
     <string name="forget_pass_desc">Aşağıdaki boşluğa e-posta adresinizi yazıp TAMAM butonuna tıkladıktan sonra şifrenizi yenilemeniz için e-posta adresinize bir link gönderilecektir. Birkaç dakika içerisinde gelen kutunuzu kontrol edebilirsiniz.</string>
     <string name="kullanici">Kullanıcı Adı</string>
-    <string name="disleksi_text">Günlerden bir gün, kaplumbağa tavşanın karşısına geçmiş:Ben senden daha hızlı koşarım! demiş. Tavşan: Git işine! demişse de dinletememiş. Sonunda bakmış olmayacak, yarış etmeye hazır olmuş. Gün gösterip sözleşmişler, sonra ayrılmışlar. Günü gelmiş. Tavşan nasıl koştuğunu biliyor ya! hiç aldırmamış, yolun kıyısına kıvrılmış, uyumuş; ama kaplumbağa koşamayacağını biliyor, bir dakikasını bile geçirmemiş, hemen yola düzülmüş, gidecekleri yere tavşandan önce varmış.</string>
+    <string name="disleksi_text">Günlerden bir gün, kaplumbağa tavşanın karşısına geçmiş:Ben senden daha hızlı koşarım\! demiş. Tavşan: Git işine\! demişse de dinletememiş. Sonunda bakmış olmayacak, yarış etmeye hazır olmuş. Gün gösterip sözleşmişler, sonra ayrılmışlar. Günü gelmiş. Tavşan nasıl koştuğunu biliyor ya! hiç aldırmamış, yolun kıyısına kıvrılmış, uyumuş; ama kaplumbağa koşamayacağını biliyor, bir dakikasını bile geçirmemiş, hemen yola düzülmüş, gidecekleri yere tavşandan önce varmış.</string>
     <string name="hazir_metin">Örnek Metin</string>
     <string name="sonuc_text">Sonuç</string>
     <string name="sonucunuz">Sonucunuz</string>
     <string name="gonder">Gönder</string>
     <string name="basla">Başla</string>
+    <string name="todo">TODO</string>
+
+
+    <string name="navigation_drawer_open">Navigasyon dolabını aç</string>
+    <string name="navigation_drawer_close">Navigasyon dolabını kapa</string>
+
+    <string name="action_settings">Ayarlar</string>
+    <string name="ball_game">Top Oyunu</string>
+    <string name="words_game">Kelime Oyunu</string>
+    <string name="summation_substraction">Toplama Çıkarma</string>
+    <string name="text_to_speech">Yazıdan Konuşmaya</string>
+    <string name="education">Eğitim</string>
+
+    <string name="gallery">Galeri</string>
+    <string name="slideshow">Slayt Gösterisi</string>
+    <string name="tools">Araçlar</string>
+    <string name="only_toggle_theme_would_work">Sadece Tema Değiştirme Çalışacak</string>
+    <string name="share">Paylaş</string>
+    <string name="toggle_theme">Tema Değiştir</string>
+    <string name="menu">Menü</string>
+    <string name="courses">Kurslar</string>
+    <string name="home">Ana Sayfa</string>
+    <string name="search">Ara</string>
+    <string name="user">Kullanıcı</string>
+    <string name="imp">İçe Aktar</string>
+    <string name="Turkish">Türkçe</string>
+    <string name="English">İngilizce</string>
+    <string name="languages">Diller</string>
 
 
 </resources>
