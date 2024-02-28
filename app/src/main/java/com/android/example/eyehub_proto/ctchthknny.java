@@ -1,29 +1,27 @@
 package com.android.example.eyehub_proto;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.android.example.eyehub_proto.pojo.UserData;
+import com.android.example.eyehub_proto.R;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-
 public class ctchthknny extends AppCompatActivity {
     private int score = 0;
-
+    private boolean gameStarted = false;
     String isim;
 
     private Handler handler = new Handler(Looper.getMainLooper());
@@ -40,32 +38,21 @@ public class ctchthknny extends AppCompatActivity {
     };
     private ArrayList<ImageView> imageArray = new ArrayList<ImageView>();
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.ctch_layout);
 
-        APIInterface requestUser= APIClient.getClient().create(APIInterface.class);
-        //Buraya UID kısmına login kısmında alınan bilgi yazılacak
-        requestUser.getUser("657f52124a844f58570b41ea").enqueue(new Callback<UserData>() {
+        Button returnToMenuButton = findViewById(R.id.returnToMenuButton);
+
+        returnToMenuButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onResponse(Call<UserData> call, Response<UserData> response) {
-                isim= response.body().getData().getUsername();
-
-            }
-
-            @Override
-            public void onFailure(Call<UserData> call, Throwable t) {
-                isim=t.getMessage();
-
+            public void onClick(View v) {
+                finish();
             }
         });
 
-
-
-
-        setContentView(R.layout.ctch_layout);
-
+        showStartGameDialog();
 
         imageArray.add(findViewById(R.id.imageView));
         imageArray.add(findViewById(R.id.imageView2));
@@ -77,57 +64,79 @@ public class ctchthknny extends AppCompatActivity {
         imageArray.add(findViewById(R.id.imageView8));
         imageArray.add(findViewById(R.id.imageView9));
 
-        hideImages();
+    }
 
-        new CountDownTimer(15500, 1000) {
-            TextView timeText=findViewById(R.id.timeText);
+    private void showStartGameDialog() {
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
+        dialogBuilder.setTitle("Start Game");
+        dialogBuilder.setMessage("Are you ready to start the game?");
 
+        dialogBuilder.setPositiveButton("Start", new DialogInterface.OnClickListener() {
             @Override
-            public void onFinish() {
+            public void onClick(DialogInterface dialog, int which) {
+                gameStarted = true;
+                new CountDownTimer(15500, 1000) {
+                    TextView timeText=findViewById(R.id.timeText);
 
-                timeText.setText(R.string.time_up);
-                handler.removeCallbacks(runnable);
-                for (ImageView image : imageArray) {
-                    image.setVisibility(View.INVISIBLE);
-                }
+                    @Override
+                    public void onFinish() {
 
-                AlertDialog.Builder alert = new AlertDialog.Builder(ctchthknny.this);
-                alert.setTitle("Time's UP");
-                alert.setMessage("Restart The Game?");
-                alert.setPositiveButton("Yes", (dialog, which) -> {
-                    Intent intent = getIntent();
-                    finish();
-                    startActivity(intent);
-                });
+                        timeText.setText(R.string.time_up);
+                        handler.removeCallbacks(runnable);
+                        for (ImageView image : imageArray) {
+                            image.setVisibility(View.INVISIBLE);
+                        }
 
-                alert.setNegativeButton("No", (dialog, which) -> {
-                    Toast.makeText(ctchthknny.this, "Time's UP! Score: " + score+" Well done "+isim, Toast.LENGTH_LONG).show();
-                });
+                        AlertDialog.Builder alert = new AlertDialog.Builder(ctchthknny.this);
+                        alert.setTitle("Time's UP");
+                        alert.setMessage("Restart The Game?");
+                        alert.setPositiveButton("Yes", (dialog, which) -> {
+                            Intent intent = getIntent();
+                            finish();
+                            startActivity(intent);
+                        });
 
-                alert.show();
+                        alert.setNegativeButton("No", (dialog, which) -> {
+                            Toast.makeText(ctchthknny.this, "Time's UP! Score: " + score+" Well done "+isim, Toast.LENGTH_LONG).show();
+                        });
+
+                        alert.show();
 
 
 
+                    }
+
+                    @Override
+                    public void onTick(long millisUntilFinished) {
+                        //fix
+                        timeText.setText("Time:" + millisUntilFinished / 1000);
+                    }
+                }.start();
+                hideImages();
             }
+        });
 
+        dialogBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
-            public void onTick(long millisUntilFinished) {
-                //fix
-                timeText.setText("Time:" + millisUntilFinished / 1000);
+            public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(ctchthknny.this, "Game cancelled", Toast.LENGTH_SHORT).show();
+                finish();
             }
-        }.start();
+        });
+
+        AlertDialog dialog = dialogBuilder.create();
+        dialog.show();
     }
 
     private void hideImages() {
-        handler.post(runnable);
+        if (gameStarted) {
+            handler.post(runnable);
+        }
     }
 
     public void increaseScore(View view) {
-
         TextView scoreText=findViewById(R.id.scoreText);
         score = score + 1;
-        //fix
         scoreText.setText("Score: " + score);
     }
 }
-
